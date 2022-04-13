@@ -1,12 +1,14 @@
 import React from 'react';
-import { ChainId, DAppProvider } from '@usedapp/core';
+import { DAppProvider, Kovan, Rinkeby } from '@usedapp/core';
 import { Header } from './components/layout/Header';
+import { Main } from './components/main/Main';
+import { Container } from '@material-ui/core';
 
 function App() {
   return (
     <DAppProvider
       config={{
-        supportedChains: [ChainId.Kovan],
+        networks: [Kovan, Rinkeby],
         notifications: {
           expirationPeriod: 1000,
           checkInterval: 1000,
@@ -14,6 +16,9 @@ function App() {
       }}
     >
       <Header />
+      <Container>
+        <Main />
+      </Container>
     </DAppProvider>
   );
 }
