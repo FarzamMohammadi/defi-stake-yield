@@ -6,7 +6,6 @@ import { Button, Input, CircularProgress, Snackbar } from '@material-ui/core';
 import Alert from '@material-ui/lab/Alert';
 import { useStakeTokens } from '../../../hooks';
 import { utils } from 'ethers';
-
 export interface StakeFormProps {
   token: Token;
 }

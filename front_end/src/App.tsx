@@ -8,7 +8,7 @@ function App() {
   return (
     <DAppProvider
       config={{
-        networks: [Kovan, Rinkeby],
+        networks: [Kovan],
         notifications: {
           expirationPeriod: 1000,
           checkInterval: 1000,
@@ -16,11 +16,10 @@ function App() {
       }}
     >
       <Header />
-      <Container>
+      <Container maxWidth='md'>
         <Main />
       </Container>
     </DAppProvider>
   );
 }
-
 export default App;
